@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Your CGPA is {{result}}</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="{% static 'cal/css/montserrat-font.css' %}"> 
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{% static 'cal/css/style.css' %}"/> 
+</head>
+
+<body class="form-v10">
+	<div class="page-content">
+		<div class="form-v10-content">
+			<form class="form-detail">
+				
+				<div class="form-left">
+					
+					<h2>General Infomation</h2>
+					
+
+      
+					
+					<div class="form-row">
+						<p style="font-size:25px">Name: {{name}}</p>
+					</div>
+
+
+					<div class="form-row">
+						<p style="font-size:25px">Department: {{dept}}</p>
+					</div>
+
+					<div class="form-row">
+						<p style="font-size:25px">Institute: {{ins}}</p>
+					</div>
+
+
+
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<p style="font-size:21px"> Roll No: {{roll}} </p>
+						</div>
+						<div class="form-row form-row-2">
+							<p style="font-size:21px"> Reg No: {{reg}} </p>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<p style="font-size:21px"> Session: {{ses}}</p>
+						</div>
+						<div class="form-row form-row-2">
+							<p style="font-size:21px">Passing Year: {{pass}}</p>
+						</div>
+					</div>
+
+
+				
+
+
+<!--  -->
+				</div>
+				<div class="form-right">
+					<h2>1st to 8th Semester GPA</h2>
+					
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<p style="color:aliceblue;"> First Sem GPA: {{val1}} </p>
+						</div>
+						<div class="form-row form-row-2">
+							<p style="color: aliceblue;"> Second Sem GPA: {{val2}}</p>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<p style="color: aliceblue;"> Third Sem GPA: {{val3}}</p>
+						</div>
+						<div class="form-row form-row-2">
+							<p style="color: aliceblue;"> Fourth Sem GPA: {{val4}}</p>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<p style="color: aliceblue;"> Fiveth Sem GPA: {{val5}}</p>
+						</div>
+						<div class="form-row form-row-2">
+							<p style="color: aliceblue;"> Six Sem GPA: {{val6}}</p>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<p style="color: aliceblue;"> Seven Sem GPA: {{val7}}</p>
+						</div>
+						<div class="form-row form-row-2">
+							<p style="color: aliceblue;"> Eight Sem GPA: {{val8}}</p>
+						</div>
+					</div>
+					
+
+
+					<div class="form-row form-row-2">
+						
+						<p style="color: white; margin: 6px 0 20px 0px; font-weight: 700;
+						font-size: 35px; border: 2px solid aliceblue; border-radius: 20px;">Your Final CGPA: {{result}} 
+					</div>
+
+
+
+
+
+					<div class="form-row-last">
+						<a href="{% url 'home' %}" ><input type="button" name="register" class="register" value="Calculate Again"> </a>
+						<input type="button" name="register" class="register" value="Print or Save as PDF" onClick="window.print()">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
